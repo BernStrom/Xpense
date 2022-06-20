@@ -26,9 +26,22 @@ struct ContentView: View {
                 ForEach(expenses.items, id: \.name) { item in
                     Text(item.name)
                 }
+                .onDelete(perform: removeItems)
+            }
+            .toolbar {
+                Button {
+                    let expense = ExpenseItem(name: "Test", type: "Personal", amount: 5)
+                    expenses.items.append(expense)
+                } label: {
+                    Image(systemName: "plus")
+                }
             }
             .navigationTitle("Xpense")
         }
+    }
+    
+    func removeItems(at offsets: IndexSet) {
+        expenses.items.remove(atOffsets: offsets)
     }
 }
 
