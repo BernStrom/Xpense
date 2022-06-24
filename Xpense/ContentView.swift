@@ -61,7 +61,7 @@ struct ContentView: View {
                             Spacer()
                             
                             Text(item.amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
-                                .foregroundColor(item.amount >= 100 ? .red : .green)
+                                .foregroundColor(item.amount >= 100 ? .red : item.amount < 10 ? .green : .orange)
                         }
                     }
                     .onDelete(perform: removePersonalItems)
@@ -78,7 +78,7 @@ struct ContentView: View {
                             Spacer()
                             
                             Text(item.amount, format: .currency(code: Locale.current.currencyCode ?? "USD"))
-                                .foregroundColor(item.amount >= 100 ? .red : .green)
+                                .foregroundColor(item.amount >= 100 ? .red : item.amount < 10 ? .green : .orange)
                         }
                     }
                     .onDelete(perform: removeBusinessItems)
