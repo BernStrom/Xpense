@@ -24,7 +24,7 @@ To delete any existing expenses, you can simply swipe left on the expense itself
 
 ## App preview
 
-
+https://user-images.githubusercontent.com/65307853/182457607-327d490a-d5b9-48e8-b9f7-ac863a67e6db.mp4
 
 ## Trying it yourself
 
